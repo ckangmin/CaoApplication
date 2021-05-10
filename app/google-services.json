@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1092027302404",
+    "project_id": "caoapplication-9629f",
+    "storage_bucket": "caoapplication-9629f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092027302404:android:104212e34e7da379eceb51",
+        "android_client_info": {
+          "package_name": "com.example.caoapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092027302404-m9uhouuhe95pcvbc0oob0dugvv6e80d9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlNXW6-6dNt-pQZ4HU3VZPJ8QM3DN2JLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092027302404-m9uhouuhe95pcvbc0oob0dugvv6e80d9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

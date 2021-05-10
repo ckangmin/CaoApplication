@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#97614F"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#FBD665"
+        android:text="카페 정보 등록"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="#FBD665"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            android:text="카페이름 : " />
+        <EditText
+            android:id="@+id/cafename"
+            android:hint="카페이름"
+            android:textColor="#FBD665"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="#FBD665"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            android:text="전화번호 : " />
+        <EditText
+            android:id="@+id/cafepnum"
+            android:hint="전화번호"
+            android:textColor="#FBD665"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="#FBD665"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="콘센트 갯수"/>
+        <EditText
+            android:id="@+id/cplug"
+            android:textColor="#FBD665"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="수량"/>
+        <TextView
+            android:textColor="#FBD665"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="데스크 갯수 : "/>
+        <EditText
+            android:id="@+id/cdesk"
+            android:textColor="#FBD665"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="수량"/>
+
+        <TextView
+            android:textColor="#FBD665"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="공간 분리 여부 : "/>
+        <EditText
+            android:id="@+id/croom"
+            android:textColor="#FBD665"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="O,X"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/photo1"/>
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/photo2"/>
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/photo3"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+
+    <Button
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addbtn"
+        android:text="등록"
+        />
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gophoto"
+            android:text="사진 등록"
+            />
+    </LinearLayout>
+
+</LinearLayout>

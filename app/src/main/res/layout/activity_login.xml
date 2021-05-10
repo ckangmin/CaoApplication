@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#97614F"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="332dp"
+
+        android:paddingVertical="30dp"
+        android:src="@drawable/caologo" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FBD665"
+
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="ID :"
+            android:textColor="#97614F"
+            android:textSize="20sp"></TextView>
+
+        <EditText
+            android:id="@+id/textId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="아이디를 입력해 주세요"
+            android:textColor="#97614F"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FBD665"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Pass :"
+            android:textColor="#97614F"
+            android:textSize="20sp"></TextView>
+
+        <EditText
+            android:id="@+id/textPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호를 입력해주세요."
+            android:password="true"
+            android:textColor="#97614F"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+        <Button
+            android:id="@+id/loginEmalibtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textStyle="bold"
+            android:text="이메일 로그인"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="10dp"
+            android:id="@+id/signgooglebtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/google_btn"
+
+            android:text="Google Login"
+            android:textStyle="bold" />
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
