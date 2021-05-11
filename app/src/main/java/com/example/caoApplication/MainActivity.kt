@@ -2,34 +2,35 @@ package com.example.caoApplication
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.caoApplication.navigation.MainAdapter
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 //class MainActivity : AppCompatActivity() , OnMapReadyCallback {
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 //    private lateinit var naverMap: NaverMap
 //    private lateinit var locationSource: FusedLocationSource
+override fun onNavigationItemSelected(p0: MenuItem): Boolean {
+    when(p0.itemId){
+        R.id.action_home ->{
+            var mainAdapter = MainAdapter()
+            supportFragmentManager.beginTransaction().replace(R.id.maincontent,mainAdapter).commit()
+            return true
+        }
 
+    }
+    return false
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var recyclerView = findViewById<View>(R.id.main_recyclerview) as RecyclerView
-        val layoutManager = LinearLayoutManager(
-                applicationContext,
-                LinearLayoutManager.VERTICAL,
-                false
-        )
 
-        recyclerView.layoutManager = layoutManager
-        recyclerView.adapter=MainAdapter()
-
+        bottom_navigation.setOnNavigationItemSelectedListener(this)
 
 
 
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity(){
             intent=Intent(this, CafeaddActivity::class.java)
             startActivity(intent)
         }
+        bottom_navigation.selectedItemId = R.id.action_home
 
 
 //        locationSource =
@@ -51,6 +53,7 @@ class MainActivity : AppCompatActivity(){
 
 
     }
+
 
 //    override fun onRequestPermissionsResult(requestCode: Int,
 //                                            permissions: Array<String>,

@@ -97,7 +97,7 @@ class LoginActivity : AppCompatActivity() {
 
     fun moveMainpage(user:FirebaseUser?){
         if(user!=null){
-            startActivity(Intent(this, MainAdapter::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
 
         }
 

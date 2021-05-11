@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,13 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CaoApplication">
-
+        <activity android:name=".CafeDetailActivity"></activity>
         <activity android:name=".CafeaddActivity" />
-
-      <!--  <meta-data
+        <!--
+  <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="키들어가는곳 " />-->
-
+            android:value="키들어가는곳 " />
+        -->
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
