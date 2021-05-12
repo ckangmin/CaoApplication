@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
             googleLogin()
         }
 
-    }
+    }//onCreate
     fun googleLogin() {
         var signInIntent = googleSignInClient?.signInIntent
         startActivityForResult(signInIntent, GOOGLE_LOGIN_CODE)

@@ -60,7 +60,7 @@ class MainAdapter:Fragment() {
            var view = LayoutInflater.from(p0.context).inflate(R.layout.mainitem, p0, false)
            return CustomViewHolder(view)
 
-       }
+       }// onCreateViewHolder
         inner class CustomViewHolder(view: View) : RecyclerView.ViewHolder(view)
        override fun onBindViewHolder(p0: RecyclerView.ViewHolder, p1: Int) {
            var viewholder = (p0 as CustomViewHolder).itemView
@@ -79,9 +79,9 @@ class MainAdapter:Fragment() {
                var intent: Intent =Intent(context,CafeDetailActivity::class.java)
                intent.putExtra("timestamp",cafeDTO!![p1].timestamp)
                startActivity(intent)
-           }
+           }//imgZone OnClickListener
 
-       }
+       }//onBindViewHolder
 
        override fun getItemCount(): Int {
            return cafeDTO.size
@@ -92,7 +92,7 @@ class MainAdapter:Fragment() {
 
 
 
-}
+}//MainAdapter
 
 
 

@@ -33,6 +33,11 @@ class CafeDetailActivity : AppCompatActivity() {
                     detailplug.text=cafeDTO?.Cafepower
                     detailroom.text=cafeDTO?.Cafespace
                     Glide.with(this).load(cafeDTO?.Cafeimg).into(cafeDatail_img)
+                    Go_Review.setOnClickListener {
+                        val intent:Intent=Intent(this,ReviewaddActivity::class.java)
+                        intent.putExtra("timestamp",cafeDTO?.timestamp)
+                        startActivity(intent)
+                    }
                 }
             }// timestamp Intent 로 받아서 데이터 가져와 데이터 입력
 

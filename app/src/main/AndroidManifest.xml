@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CaoApplication">
-        <activity android:name=".CafeDetailActivity"></activity>
+        <activity android:name=".ReviewaddActivity"></activity>
+        <activity android:name=".CafeDetailActivity" />
         <activity android:name=".CafeaddActivity" />
         <!--
   <meta-data

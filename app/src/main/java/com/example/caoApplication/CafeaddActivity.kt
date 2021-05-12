@@ -14,6 +14,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.UploadTask
 import kotlinx.android.synthetic.main.activity_cafeadd.*
+import kotlinx.android.synthetic.main.activity_reviewadd.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -88,7 +89,6 @@ class CafeaddActivity : AppCompatActivity() {
             cafeDTO.Cafepower = cplug.text.toString()
             cafeDTO.CafeDesk = cdesk.text.toString()
             cafeDTO.Cafespace = croom.text.toString()
-
             cafeDTO.uid = auth?.currentUser?.uid
 
             cafeDTO.timestamp = System.currentTimeMillis()
