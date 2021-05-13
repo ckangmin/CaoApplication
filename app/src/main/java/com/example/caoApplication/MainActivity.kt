@@ -3,9 +3,17 @@ package com.example.caoApplication
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
+import android.view.View.VISIBLE
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.example.caoApplication.navigation.MainAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import kotlinx.android.synthetic.main.activity_cafeadd.*
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -14,6 +22,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 //    private lateinit var naverMap: NaverMap
 //    private lateinit var locationSource: FusedLocationSource
+        var auth:FirebaseAuth?=null
+
 override fun onNavigationItemSelected(p0: MenuItem): Boolean {
     when(p0.itemId){
         R.id.action_home ->{
@@ -31,10 +41,13 @@ override fun onNavigationItemSelected(p0: MenuItem): Boolean {
         setContentView(R.layout.activity_main)
 
         bottom_navigation.setOnNavigationItemSelectedListener(this)
+        auth= FirebaseAuth.getInstance()
+       /* if(auth?.currentUser?.uid=="masteruid"){
+            goaddbtn?.visibility= VISIBLE
 
+        }*/
 
-
-        goaddbtn.setOnClickListener {
+        goaddbtn?.setOnClickListener {
             var intent:Intent
             intent=Intent(this, CafeaddActivity::class.java)
             startActivity(intent)

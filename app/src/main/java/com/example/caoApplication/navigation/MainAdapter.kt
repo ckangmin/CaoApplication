@@ -78,6 +78,7 @@ class MainAdapter:Fragment() {
            viewholder.imgZone.setOnClickListener {
                var intent: Intent =Intent(context,CafeDetailActivity::class.java)
                intent.putExtra("timestamp",cafeDTO!![p1].timestamp)
+               intent.putExtra("cafename",cafeDTO!![p1].CafeName)
                startActivity(intent)
            }//imgZone OnClickListener
 

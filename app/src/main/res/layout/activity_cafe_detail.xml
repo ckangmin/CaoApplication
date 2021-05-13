@@ -16,6 +16,7 @@
         android:textColor="#FBD665"
         />
     <ImageView
+        android:scaleType="fitXY"
         android:id="@+id/cafeDatail_img"
         android:layout_width="match_parent"
         android:layout_height="300dp"/>
@@ -115,4 +116,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="리뷰 작성"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cafeDetail_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 </LinearLayout>
