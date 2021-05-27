@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_reviewadd.*
 
 class ReviewaddActivity : AppCompatActivity() {
     var timestamp:Long ?=null
+    var cafeimg:String?=null
     var firestore: FirebaseFirestore?=null
     var auth:FirebaseAuth?=null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +23,7 @@ class ReviewaddActivity : AppCompatActivity() {
         var intent: Intent =getIntent()
 
         timestamp=intent.getLongExtra("timestamp",0)
+        cafeimg=intent.getStringExtra("img")
         firestore?.collection("cafes")?.whereEqualTo("timestamp",timestamp)?.addSnapshotListener { querySnapshot, firebaseFirestoreException ->
             if (querySnapshot == null) return@addSnapshotListener
             for (snapshot in querySnapshot!!.documents) {
@@ -36,6 +38,7 @@ class ReviewaddActivity : AppCompatActivity() {
                     reviewDTO?.reviewText = review_text.text.toString()
                     reviewDTO?.uid = auth?.currentUser?.uid
                     reviewDTO?.Email=FirebaseAuth.getInstance().currentUser?.email
+                    reviewDTO?.cafeImg=cafeimg
                     firestore?.collection("reviews")?.document()?.set(reviewDTO)
                     Toast.makeText(this,"성공적으로 리뷰등록이 완료되었습니다.",Toast.LENGTH_SHORT).show()
                     finish()

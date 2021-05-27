@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#97614F"
+    android:id="@+id/maincontent"
 
-    android:id="@+id/maincontent">
+>
 
 
 
@@ -21,6 +22,7 @@
         ></com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <Button
+
 
         android:id="@+id/goaddbtn"
         android:layout_width="wrap_content"

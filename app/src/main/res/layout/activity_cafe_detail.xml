@@ -111,11 +111,24 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
         <Button
+            android:layout_marginRight="20dp"
             android:id="@+id/Go_Review"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="리뷰 작성"/>
+            android:text="리뷰작성"/>
+    <Button
+        android:layout_marginLeft="20dp"
+        android:id="@+id/Go_Chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="문의하기"/>
+    </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/cafeDetail_recycler"
             android:layout_width="match_parent"

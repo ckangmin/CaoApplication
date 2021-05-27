@@ -4,8 +4,19 @@
     android:layout_width="wrap_content">
     <item
         android:id="@+id/action_home"
-        android:icon="@drawable/homeicon"
+        android:icon="@drawable/home"
         android:enabled="true"
-        android:title="home"/>
+        android:title="Home"/>
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/search"
+        android:enabled="true"
+        android:title="Search"/>
+    <item
+        android:icon="@drawable/mypage"
+        android:id="@+id/action_Mypage"
+        android:enabled="true"
+        android:title="Mypage"
+        />
 
 </menu>

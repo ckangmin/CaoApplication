@@ -75,7 +75,7 @@ class MainAdapter:Fragment() {
            viewholder.pnumZone.text=cafeDTO!![p1].CafePnum
 
 
-           viewholder.imgZone.setOnClickListener {
+           viewholder.setOnClickListener {
                var intent: Intent =Intent(context,CafeDetailActivity::class.java)
                intent.putExtra("timestamp",cafeDTO!![p1].timestamp)
                intent.putExtra("cafename",cafeDTO!![p1].CafeName)

@@ -10,12 +10,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.example.caoApplication.navigation.MainAdapter
+import com.example.caoApplication.navigation.Mypage
+import com.example.caoApplication.navigation.Search
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_cafeadd.*
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.navi_mypage.*
 
 
 //class MainActivity : AppCompatActivity() , OnMapReadyCallback {
@@ -31,6 +34,17 @@ override fun onNavigationItemSelected(p0: MenuItem): Boolean {
             supportFragmentManager.beginTransaction().replace(R.id.maincontent,mainAdapter).commit()
             return true
         }
+        R.id.action_Mypage->{
+            var myPage= Mypage()
+            supportFragmentManager.beginTransaction().replace(R.id.maincontent,myPage).commit()
+            return true
+        }
+        R.id.action_search->{
+            var search= Search()
+            supportFragmentManager.beginTransaction().replace(R.id.maincontent,search).commit()
+            return true
+
+        }
 
     }
     return false
@@ -42,10 +56,11 @@ override fun onNavigationItemSelected(p0: MenuItem): Boolean {
 
         bottom_navigation.setOnNavigationItemSelectedListener(this)
         auth= FirebaseAuth.getInstance()
-       /* if(auth?.currentUser?.uid=="masteruid"){
-            goaddbtn?.visibility= VISIBLE
 
-        }*/
+//        if(auth?.currentUser?.uid=="admin uid"){
+//            goaddbtn?.visibility= VISIBLE
+//
+//        }
 
         goaddbtn?.setOnClickListener {
             var intent:Intent

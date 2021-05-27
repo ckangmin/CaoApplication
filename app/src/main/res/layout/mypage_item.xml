@@ -17,10 +17,10 @@
         >
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:gravity="center"
-            android:id="@+id/imgZone"
+            android:id="@+id/mypage_imgZone"
             android:scaleType="fitXY"/>
 
         <LinearLayout
@@ -42,33 +42,12 @@
                     android:text="카페명 : "
                     android:textSize="20sp"/>
 
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:textSize="20sp"
-                android:id="@+id/nameZone"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-
                 <TextView
-                    android:layout_marginLeft="120dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="전화번호 : "
-                    android:textSize="20sp"/>
 
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textSize="20sp"
-                    android:id="@+id/pnumZone"/>
-
-
+                    android:id="@+id/mypage_cafeID"/>
             </LinearLayout>
 
 

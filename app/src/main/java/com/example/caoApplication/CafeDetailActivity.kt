@@ -46,6 +46,15 @@ class CafeDetailActivity : AppCompatActivity() {
                     Go_Review.setOnClickListener {
                         val intent:Intent=Intent(this,ReviewaddActivity::class.java)
                         intent.putExtra("timestamp",cafeDTO?.timestamp)
+                        intent.putExtra("img",cafeDTO?.Cafeimg)
+                        startActivity(intent)
+                    }
+                    Go_Chat.setOnClickListener {
+                        var intent:Intent=Intent(this,ChatActivity::class.java)
+                        intent.putExtra("timestamp",cafeDTO?.timestamp)
+                        intent.putExtra("cafeName",cafeDTO?.CafeName)
+                        intent.putExtra("img",cafeDTO?.Cafeimg)
+                        intent.putExtra("destinationUid",cafeDTO?.uid)
                         startActivity(intent)
                     }
                 }

@@ -10,6 +10,9 @@
         android:id="@+id/review_cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
 
         app:cardBackgroundColor="#FBD665">
 
