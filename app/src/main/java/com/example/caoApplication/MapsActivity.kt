@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
@@ -46,7 +47,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         val my = LatLng(37.55743, 126.92620)
         val my2= LatLng(37.5465753,126.9124594)
 
-        val MyLocation=mMap.addMarker(MarkerOptions().position(my).title("내 위치"))
+        val MyLocation=mMap.addMarker(MarkerOptions().position(my).title("내 위치").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
         MyLocation.showInfoWindow()
         var cafeDTO:ArrayList<CafeDTO> = arrayListOf()
 
