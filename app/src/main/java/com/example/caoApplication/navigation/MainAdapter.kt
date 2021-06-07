@@ -13,14 +13,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.caoApplication.CafeDTO
 import com.example.caoApplication.CafeDetailActivity
+import com.example.caoApplication.MapsActivity
 import com.example.caoApplication.R
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_cafeadd.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.mainitem.view.*
+import kotlinx.android.synthetic.main.mainrecycler.*
 import kotlinx.android.synthetic.main.mainrecycler.view.*
+
 
 
 class MainAdapter:Fragment() {
@@ -38,8 +47,19 @@ class MainAdapter:Fragment() {
         view.main_recyclerview.adapter = CafeViewRecyclerViewAdapter()
         view.main_recyclerview.layoutManager = LinearLayoutManager(activity)
         view.main_recyclerview.addItemDecoration(DividerItemDecoration(view.context, 1))
+
+        view.goMap_btn.setOnClickListener {
+            var intent:Intent=Intent(context,MapsActivity::class.java)
+            startActivity(intent)
+        }
         return view
     }//onCreateView
+
+    override fun onResume() {
+        super.onResume()
+        view?.main_recyclerview?.layoutManager=LinearLayoutManager(activity,LinearLayoutManager.VERTICAL,true)
+        view?.main_recyclerview?.adapter= CafeViewRecyclerViewAdapter()
+    }
 
    inner class CafeViewRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
        var cafeDTO: ArrayList<CafeDTO> = arrayListOf()
@@ -88,8 +108,6 @@ class MainAdapter:Fragment() {
            return cafeDTO.size
        }
    }//CafeViewRecyclerViewAdapter
-
-
 
 
 

@@ -34,14 +34,6 @@
                 android:textSize="20sp"
                 android:hint="카페이름"
                 android:id="@+id/search_name"/>
-                <TextView
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:hint="위치"
-                    android:id="@+id/search_location"/>
-
             </LinearLayout>
 
 

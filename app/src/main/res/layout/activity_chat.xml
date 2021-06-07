@@ -3,7 +3,8 @@
     android:orientation="vertical"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/chat_linear">
     <LinearLayout
         android:gravity="center"
         android:layout_width="match_parent"
@@ -22,20 +23,31 @@
             android:layout_height="wrap_content"
             android:id="@+id/chat_cafename"
             android:hint="카페이름"/>
-        
-        
-        
-    </LinearLayout>
 
+
+
+    </LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chat_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        />
 
 
 
     <LinearLayout
+        android:id="@+id/hi"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -53,5 +65,6 @@
 
 
     </LinearLayout>
+</RelativeLayout>
 
 </LinearLayout>

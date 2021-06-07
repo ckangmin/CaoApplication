@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.caoApplication.navigation.ChatRoom
 import com.example.caoApplication.navigation.MainAdapter
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_cafe_detail.*
@@ -56,6 +57,7 @@ class CafeDetailActivity : AppCompatActivity() {
                         intent.putExtra("img",cafeDTO?.Cafeimg)
                         intent.putExtra("destinationUid",cafeDTO?.uid)
                         startActivity(intent)
+
                     }
                 }
             }// timestamp Intent 로 받아서 데이터 가져와 데이터 입력

@@ -13,6 +13,11 @@
         android:enabled="true"
         android:title="Search"/>
     <item
+        android:id="@+id/action_chat"
+        android:icon="@drawable/chatroom"
+        android:enabled="true"
+        android:title="Chat"/>
+    <item
         android:icon="@drawable/mypage"
         android:id="@+id/action_Mypage"
         android:enabled="true"

@@ -8,5 +8,7 @@ data class CafeDTO(
     var CafePnum:String?=null,
     var CafeDesk:String?=null,
     var Cafespace:String?=null,
-    var Cafepower:String?=null
+    var Cafepower:String?=null,
+    var Location1:Double?=null,
+    var Location2: Double?=null
 )

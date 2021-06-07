@@ -9,9 +9,11 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
+import com.example.caoApplication.navigation.ChatRoom
 import com.example.caoApplication.navigation.MainAdapter
 import com.example.caoApplication.navigation.Mypage
 import com.example.caoApplication.navigation.Search
+import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -39,12 +41,21 @@ override fun onNavigationItemSelected(p0: MenuItem): Boolean {
             supportFragmentManager.beginTransaction().replace(R.id.maincontent,myPage).commit()
             return true
         }
+        R.id.action_chat->{
+            var chat=ChatRoom()
+            supportFragmentManager.beginTransaction().replace(R.id.maincontent,chat).commit()
+            return true
+        }
+
+
+
         R.id.action_search->{
             var search= Search()
             supportFragmentManager.beginTransaction().replace(R.id.maincontent,search).commit()
             return true
 
         }
+
 
     }
     return false
@@ -61,6 +72,7 @@ override fun onNavigationItemSelected(p0: MenuItem): Boolean {
 //            goaddbtn?.visibility= VISIBLE
 //
 //        }
+
 
         goaddbtn?.setOnClickListener {
             var intent:Intent

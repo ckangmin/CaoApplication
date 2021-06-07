@@ -90,7 +90,8 @@ class CafeaddActivity : AppCompatActivity() {
             cafeDTO.CafeDesk = cdesk.text.toString()
             cafeDTO.Cafespace = croom.text.toString()
             cafeDTO.uid = auth?.currentUser?.uid
-
+            cafeDTO.Location1=location1.text.toString().toDouble()
+            cafeDTO.Location2=location2.text.toString().toDouble()
             cafeDTO.timestamp = System.currentTimeMillis()
 
             firestore?.collection("cafes")?.document()?.set(cafeDTO)
